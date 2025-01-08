@@ -1,0 +1,333 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>IT Support Role - Muhammad Arapat Rahman</title>
+    <style>
+        /* Animations */
+        @keyframes fadeIn {
+            from { opacity: 0; }
+            to { opacity: 1; }
+        }
+
+        /* Global Styles */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Segoe UI', sans-serif;
+        }
+
+        body {
+            background: #f8fafc;
+            color: #1e293b;
+            line-height: 1.6;
+            transition: background 0.3s ease, color 0.3s ease;
+        }
+
+        body.dark-mode {
+            background: #0f172a;
+            color: #e2e8f0;
+        }
+
+        .container {
+            max-width: 1000px;
+            margin: 0 auto;
+            padding: 20px;
+            animation: fadeIn 1s ease-out;
+        }
+
+        /* Navigation */
+        .navigation {
+            position: fixed;
+            top: 0;
+            left: 0;
+            right: 0;
+            background: rgba(15, 23, 42, 0.95);
+            padding: 20px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            z-index: 1000;
+            backdrop-filter: blur(10px);
+        }
+
+        .nav-brand {
+            color: #60a5fa;
+            text-decoration: none;
+            font-size: 1.2em;
+            font-weight: bold;
+        }
+
+        .nav-links {
+            display: flex;
+            gap: 20px;
+        }
+
+        .nav-link {
+            color: #e2e8f0;
+            text-decoration: none;
+            transition: color 0.3s ease;
+        }
+
+        .nav-link:hover {
+            color: #60a5fa;
+        }
+
+        /* Role Header */
+        .role-header {
+            background: linear-gradient(-45deg, #1e293b, #0f172a);
+            padding: 100px 20px 40px;
+            text-align: center;
+        }
+
+        .role-title {
+            font-size: 2.5em;
+            color: #60a5fa;
+            margin-bottom: 10px;
+        }
+
+        .role-company {
+            color: #94a3b8;
+            font-size: 1.2em;
+            margin-bottom: 10px;
+        }
+
+        .role-period {
+            color: #64748b;
+        }
+
+        /* Sections */
+        .section {
+            background: #ffffff;
+            margin: 30px 0;
+            padding: 30px;
+            border-radius: 10px;
+            animation: fadeIn 1s ease-out;
+        }
+
+        body.dark-mode .section {
+            background: #1e293b;
+        }
+
+        .section h2 {
+            color: #60a5fa;
+            margin-bottom: 20px;
+            font-size: 1.5em;
+        }
+
+        /* Responsibilities Grid */
+        .responsibilities-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 20px;
+        }
+
+        .responsibility-item {
+            background: #e2e8f0;
+            padding: 20px;
+            border-radius: 8px;
+            transition: transform 0.3s ease;
+        }
+
+        body.dark-mode .responsibility-item {
+            background: #2d3748;
+        }
+
+        .responsibility-item:hover {
+            transform: translateY(-5px);
+        }
+
+        .responsibility-item h3 {
+            color: #60a5fa;
+            margin-bottom: 10px;
+        }
+
+        .responsibility-item ul {
+            list-style: none;
+        }
+
+        .responsibility-item li {
+            margin-bottom: 10px;
+        }
+
+        /* Technologies */
+        .technologies {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 10px;
+        }
+
+        .tech-tag {
+            background: #3b82f6;
+            color: white;
+            padding: 5px 15px;
+            border-radius: 15px;
+            font-size: 0.9em;
+        }
+
+        /* Achievements List */
+        .achievements-list li {
+            margin-bottom: 15px;
+            padding: 15px;
+            background: #e2e8f0;
+            border-radius: 8px;
+            list-style: none;
+        }
+
+        body.dark-mode .achievements-list li {
+            background: #2d3748;
+        }
+
+        /* Back Button */
+        .back-button {
+            display: inline-block;
+            padding: 10px 20px;
+            background: #3b82f6;
+            color: white;
+            text-decoration: none;
+            border-radius: 5px;
+            margin-top: 20px;
+            transition: background 0.3s ease;
+        }
+
+        .back-button:hover {
+            background: #2563eb;
+        }
+
+        /* Dark Mode Toggle Button */
+        .dark-mode-toggle {
+            position: fixed;
+            bottom: 20px;
+            right: 20px;
+            background: #3b82f6;
+            color: white;
+            border: none;
+            padding: 10px 20px;
+            border-radius: 5px;
+            cursor: pointer;
+            transition: background 0.3s ease;
+        }
+
+        .dark-mode-toggle:hover {
+            background: #2563eb;
+        }
+
+        /* Responsive Design */
+        @media (max-width: 768px) {
+            .role-title {
+                font-size: 2em;
+            }
+
+            .role-company {
+                font-size: 1em;
+            }
+
+            .responsibilities-grid {
+                grid-template-columns: 1fr;
+            }
+
+            .navigation {
+                flex-direction: column;
+                gap: 10px;
+            }
+
+            .role-header {
+                padding: 80px 20px 30px;
+            }
+
+            .section {
+                padding: 20px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <nav class="navigation">
+        <a href="index.html" class="nav-brand">Muhammad Arapat Rahman</a>
+        <div class="nav-links">
+            <a href="index.html" class="nav-link">Home</a>
+            <a href="#contact" class="nav-link">Contact</a>
+        </div>
+    </nav>
+
+    <div class="role-header">
+        <h1 class="role-title">IT Support</h1>
+        <div class="role-company">PT. Thriveni Mining Group LTD</div>
+        <div class="role-period">September 2019 - September 2020</div>
+    </div>
+
+    <div class="container">
+        <section class="section">
+            <h2>Key Responsibilities</h2>
+            <div class="responsibilities-grid">
+                <div class="responsibility-item">
+                    <h3>Network Infrastructure</h3>
+                    <ul>
+                        <li>Setup and configuration of Mikrotik and Firewall systems</li>
+                        <li>Setup and configuration of Basestation and Radio HT</li>
+                        <li>Setup Configuration Wireless access point and station PTP (Ubiquiti)</li>
+                        <li>Network and Hardware Troubleshooting</li>
+                    </ul>
+                </div>
+                <div class="responsibility-item">
+                    <h3>System Administration</h3>
+                    <ul>
+                        <li>Windows server Domain account and backup data management</li>
+                        <li>Support HR System (HRIS)</li>
+                        <li>Create and setup email Outlook CPanel</li>
+                        <li>Setup and configuration Printer Sharing</li>
+                    </ul>
+                </div>
+                <div class="responsibility-item">
+                    <h3>Hardware & Security</h3>
+                    <ul>
+                        <li>Desktop Maintenance Support</li>
+                        <li>Setup Configuration Finger Print</li>
+                        <li>Setup and configuration IP Camera and Analog Camera CCTV</li>
+                        <li>Preventative Maintenance for Computers and Laptops</li>
+                    </ul>
+                </div>
+            </div>
+        </section>
+
+        <section class="section">
+            <h2>Technologies Used</h2>
+            <div class="technologies">
+                <span class="tech-tag">Mikrotik</span>
+                <span class="tech-tag">Firewall</span>
+                <span class="tech-tag">Ubiquiti</span>
+                <span class="tech-tag">Windows Server</span>
+                <span class="tech-tag">HRIS</span>
+                <span class="tech-tag">CPanel</span>
+                <span class="tech-tag">CCTV Systems</span>
+                <span class="tech-tag">Network Security</span>
+                <span class="tech-tag">Hardware Maintenance</span>
+                <span class="tech-tag">Radio HT</span>
+            </div>
+        </section>
+
+        <section class="section">
+            <h2>Key Achievements</h2>
+            <ul class="achievements-list">
+                <li>Successfully managed IT operations across two mobile sites</li>
+                <li>Implemented comprehensive network infrastructure including Mikrotik, Firewall, and wireless systems</li>
+                <li>Established efficient IT asset monitoring and maintenance procedures</li>
+                <li>Supported and maintained critical HR systems while ensuring minimal downtime</li>
+                <li>Handled electrical support for multiple sites alongside IT responsibilities</li>
+            </ul>
+        </section>
+
+        <a href="index.html" class="back-button">Back to Portfolio</a>
+    </div>
+
+    <button class="dark-mode-toggle" onclick="toggleDarkMode()">Toggle Dark Mode</button>
+
+    <script>
+        function toggleDarkMode() {
+            document.body.classList.toggle('dark-mode');
+        }
+    </script>
+</body>
+</html>

@@ -1,0 +1,299 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>IT Supervisor Role - Muhammad Arapat Rahman</title>
+    <style>
+        @keyframes fadeIn {
+            from { opacity: 0; }
+            to { opacity: 1; }
+        }
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Segoe UI', sans-serif;
+        }
+
+        body {
+            background: #f8fafc; /* Light mode background */
+            color: #1e293b; /* Light mode text color */
+            line-height: 1.6;
+            transition: background 0.3s ease, color 0.3s ease;
+        }
+
+        body.dark-mode {
+            background: #0f172a; /* Dark mode background */
+            color: #e2e8f0; /* Dark mode text color */
+        }
+
+        .container {
+            max-width: 1000px;
+            margin: 0 auto;
+            padding: 20px;
+            animation: fadeIn 1s ease-out;
+        }
+
+        .navigation {
+            position: fixed;
+            top: 0;
+            left: 0;
+            right: 0;
+            background: rgba(15, 23, 42, 0.95);
+            padding: 20px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            z-index: 1000;
+            backdrop-filter: blur(10px);
+        }
+
+        .nav-brand {
+            color: #60a5fa;
+            text-decoration: none;
+            font-size: 1.2em;
+            font-weight: bold;
+        }
+
+        .nav-links {
+            display: flex;
+            gap: 20px;
+        }
+
+        .nav-link {
+            color: #e2e8f0;
+            text-decoration: none;
+            transition: color 0.3s ease;
+        }
+
+        .nav-link:hover {
+            color: #60a5fa;
+        }
+
+        .role-header {
+            background: linear-gradient(-45deg, #1e293b, #0f172a);
+            padding: 100px 20px 40px;
+            text-align: center;
+        }
+
+        .role-title {
+            font-size: 2.5em;
+            color: #60a5fa;
+            margin-bottom: 10px;
+        }
+
+        .role-company {
+            color: #94a3b8;
+            font-size: 1.2em;
+            margin-bottom: 10px;
+        }
+
+        .role-period {
+            color: #64748b;
+        }
+
+        .section {
+            background: #ffffff; /* Light mode section background */
+            margin: 30px 0;
+            padding: 30px;
+            border-radius: 10px;
+            animation: fadeIn 1s ease-out;
+        }
+
+        body.dark-mode .section {
+            background: #1e293b; /* Dark mode section background */
+        }
+
+        .section h2 {
+            color: #60a5fa;
+            margin-bottom: 20px;
+            font-size: 1.5em;
+        }
+
+        .responsibilities-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 20px;
+        }
+
+        .responsibility-item {
+            background: #e2e8f0; /* Light mode item background */
+            padding: 20px;
+            border-radius: 8px;
+            transition: transform 0.3s ease;
+        }
+
+        body.dark-mode .responsibility-item {
+            background: #2d3748; /* Dark mode item background */
+        }
+
+        .responsibility-item:hover {
+            transform: translateY(-5px);
+        }
+
+        .technologies {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 10px;
+        }
+
+        .tech-tag {
+            background: #3b82f6;
+            color: white;
+            padding: 5px 15px;
+            border-radius: 15px;
+            font-size: 0.9em;
+        }
+
+        .achievements-list li {
+            margin-bottom: 15px;
+            padding: 15px;
+            background: #e2e8f0; /* Light mode list item background */
+            border-radius: 8px;
+            list-style: none;
+        }
+
+        body.dark-mode .achievements-list li {
+            background: #2d3748; /* Dark mode list item background */
+        }
+
+        .back-button {
+            display: inline-block;
+            padding: 10px 20px;
+            background: #3b82f6;
+            color: white;
+            text-decoration: none;
+            border-radius: 5px;
+            margin-top: 20px;
+            transition: background 0.3s ease;
+        }
+
+        .back-button:hover {
+            background: #2563eb;
+        }
+
+        .dark-mode-toggle {
+            position: fixed;
+            bottom: 20px;
+            right: 20px;
+            background: #3b82f6;
+            color: white;
+            border: none;
+            padding: 10px 20px;
+            border-radius: 5px;
+            cursor: pointer;
+            transition: background 0.3s ease;
+        }
+
+        .dark-mode-toggle:hover {
+            background: #2563eb;
+        }
+
+        @media (max-width: 768px) {
+            .responsibilities-grid {
+                grid-template-columns: 1fr;
+            }
+
+            .role-title {
+                font-size: 2em;
+            }
+
+            .role-company {
+                font-size: 1em;
+            }
+        }
+    </style>
+</head>
+<body>
+    <nav class="navigation">
+        <a href="index.html" class="nav-brand">Muhammad Arapat Rahman</a>
+        <div class="nav-links">
+            <a href="index.html" class="nav-link">Home</a>
+            <a href="#contact" class="nav-link">Contact</a>
+        </div>
+    </nav>
+
+    <div class="role-header">
+        <h1 class="role-title">IT Supervisor</h1>
+        <div class="role-company">PT. Bangun Rimba Sejahtera Sinarmas Forestry Group</div>
+        <div class="role-period">August 2015 - June 2019</div>
+    </div>
+
+    <div class="container">
+        <section class="section">
+            <h2>Key Responsibilities</h2>
+            <div class="responsibilities-grid">
+                <div class="responsibility-item">
+                    <h3>Network & Infrastructure</h3>
+                    <ul>
+                        <li>Monitoring Cloud Internet providers and Troubleshooting</li>
+                        <li>Cisco 2921 Router and Catalyst Switch Configuration</li>
+                        <li>Network Infrastructure Planning and topology</li>
+                        <li>Development IT Network and CCTV systems</li>
+                    </ul>
+                </div>
+                <div class="responsibility-item">
+                    <h3>System Administration</h3>
+                    <ul>
+                        <li>Setup and configuration Windows server, Domain Account</li>
+                        <li>FTP Server Configuration</li>
+                        <li>Printer Server & Drive Sharing Configuration</li>
+                        <li>Lotus Note & IBM Note (Email) Configuration</li>
+                        <li>VoIP (IP Phone Cisco) Configuration with Cisco Call Manager (CUCM)</li>
+                    </ul>
+                </div>
+                <div class="responsibility-item">
+                    <h3>Management & Support</h3>
+                    <ul>
+                        <li>Maintenance of monthly reports & monthly turnover</li>
+                        <li>Make presentations to management based on IT</li>
+                        <li>Support Fire Operation System Management (RPK)</li>
+                        <li>Technical Support and Communication</li>
+                        <li>Maintenance Hardware and Software Treatment Periodically</li>
+                    </ul>
+                </div>
+            </div>
+        </section>
+
+        <section class="section">
+            <h2>Technologies Used</h2>
+            <div class="technologies">
+                <span class="tech-tag">Cisco Router</span>
+                <span class="tech-tag">Catalyst Switch</span>
+                <span class="tech-tag">Windows Server</span>
+                <span class="tech-tag">FTP Server</span>
+                <span class="tech-tag">Lotus Notes</span>
+                <span class="tech-tag">IBM Notes</span>
+                <span class="tech-tag">VoIP</span>
+                <span class="tech-tag">CUCM</span>
+                <span class="tech-tag">CCTV Systems</span>
+                <span class="tech-tag">Cloud Infrastructure</span>
+                <span class="tech-tag">Network Security</span>
+            </div>
+        </section>
+
+        <section class="section">
+            <h2>Key Achievements</h2>
+            <ul class="achievements-list">
+                <li>Successfully implemented and managed complex network infrastructure using Cisco equipment</li>
+                <li>Established comprehensive VoIP system using Cisco Call Manager</li>
+                <li>Developed and maintained robust IT documentation and reporting systems</li>
+                <li>Implemented effective domain account management system</li>
+                <li>Supported critical fire operation system management</li>
+            </ul>
+        </section>
+
+        <a href="index.html" class="back-button">Back to Portfolio</a>
+    </div>
+
+    <button class="dark-mode-toggle" onclick="toggleDarkMode()">Toggle Dark Mode</button>
+
+    <script>
+        function toggleDarkMode() {
+            document.body.classList.toggle('dark-mode');
+        }
+    </script>
+</body>
+</html>
