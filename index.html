@@ -5,7 +5,20 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Professional IT Portfolio - Muhammad Arapat Rahman</title>
     <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600&display=swap" rel="stylesheet">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" rel="stylesheet">
     <style>
+        /* CSS Variables */
+        :root {
+            --primary-color: #1e3a8a;
+            --secondary-color: #6a11cb;
+            --accent-color: #2575fc;
+            --background-color: #f8f9fa;
+            --text-color: #333333;
+            --light-text-color: #e0e7ff;
+            --white: #ffffff;
+            --shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+        }
+
         /* Global Styles */
         * {
             margin: 0;
@@ -15,8 +28,8 @@
         }
 
         body {
-            background: #f8f9fa; /* Light gray background */
-            color: #333333; /* Dark gray text */
+            background: var(--background-color);
+            color: var(--text-color);
             line-height: 1.6;
         }
 
@@ -45,9 +58,9 @@
             align-items: center;
             justify-content: center;
             text-align: center;
-            background: linear-gradient(135deg, #6a11cb, #2575fc); /* Elegant gradient */
+            background: linear-gradient(135deg, var(--secondary-color), var(--accent-color));
             padding: 40px;
-            color: #ffffff; /* White text for contrast */
+            color: var(--white);
         }
 
         .hero-content {
@@ -60,7 +73,7 @@
             width: 150px;
             height: 150px;
             border-radius: 50%;
-            border: 4px solid #ffffff;
+            border: 4px solid var(--white);
             object-fit: cover;
             margin-bottom: 20px;
         }
@@ -72,7 +85,7 @@
 
         .hero p {
             font-size: 1.1em;
-            color: #e0e7ff; /* Light text for contrast */
+            color: var(--light-text-color);
         }
 
         /* Navigation */
@@ -81,7 +94,7 @@
             top: 0;
             left: 0;
             right: 0;
-            background: rgba(106, 17, 203, 0.95); /* Semi-transparent gradient background */
+            background: rgba(106, 17, 203, 0.95);
             padding: 15px 20px;
             display: flex;
             justify-content: space-between;
@@ -91,7 +104,7 @@
         }
 
         .nav-brand {
-            color: #ffffff;
+            color: var(--white);
             text-decoration: none;
             font-size: 1.2em;
             font-weight: bold;
@@ -103,14 +116,14 @@
         }
 
         .nav-link {
-            color: #e0e7ff;
+            color: var(--light-text-color);
             text-decoration: none;
             font-weight: 500;
             transition: color 0.3s ease;
         }
 
         .nav-link:hover {
-            color: #ffffff;
+            color: var(--white);
         }
 
         /* Sections */
@@ -128,17 +141,17 @@
 
         h2 {
             font-size: 2em;
-            color: #1e3a8a; /* Dark blue for headings */
+            color: var(--primary-color);
             margin-bottom: 20px;
             text-align: center;
         }
 
         /* Bio Section */
         .bio-section {
-            background: #ffffff;
+            background: var(--white);
             border-radius: 10px;
             padding: 30px;
-            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+            box-shadow: var(--shadow);
         }
 
         .bio-grid {
@@ -152,38 +165,54 @@
         }
 
         .bio-label {
-            color: #1e3a8a; /* Dark blue for labels */
+            color: var(--primary-color);
             font-weight: bold;
             margin-bottom: 5px;
         }
 
         /* Skills Section */
         .skills-section {
-            background: #ffffff;
+            background: var(--white);
             border-radius: 10px;
             padding: 30px;
-            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+            box-shadow: var(--shadow);
         }
 
         .skills-grid {
             display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
-            gap: 20px;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 30px;
         }
 
         .skill-category {
             margin-bottom: 20px;
+            text-align: center;
         }
 
         .skill-category h3 {
-            color: #1e3a8a; /* Dark blue for category titles */
-            margin-bottom: 15px;
+            color: var(--primary-color);
+            margin: 15px 0;
+        }
+
+        .skill-icon {
+            width: 80px;
+            height: 80px;
+            margin: 0 auto 15px;
+        }
+
+        .skill-icon svg {
+            width: 100%;
+            height: 100%;
+        }
+
+        .skill-item {
+            margin: 15px 0;
         }
 
         .skill-tag {
             display: inline-block;
-            background: #e0e7ff; /* Light blue background */
-            color: #1e3a8a; /* Dark blue text */
+            background: var(--light-text-color);
+            color: var(--primary-color);
             padding: 8px 15px;
             border-radius: 15px;
             margin: 5px;
@@ -192,21 +221,22 @@
         }
 
         .skill-tag:hover {
-            background: #1e3a8a; /* Dark blue on hover */
-            color: #ffffff; /* White text on hover */
+            background: var(--primary-color);
+            color: var(--white);
         }
 
         .skill-progress {
-            background: #e0e7ff; /* Light blue background */
+            background: var(--light-text-color);
             border-radius: 10px;
             height: 10px;
             margin: 10px 0;
         }
 
         .progress-bar {
-            background: #1e3a8a; /* Dark blue progress bar */
+            background: var(--primary-color);
             height: 100%;
             border-radius: 10px;
+            transition: width 1s ease-in-out;
         }
 
         /* Roles Section */
@@ -217,28 +247,28 @@
         }
 
         .role-card {
-            background: #ffffff;
+            background: var(--white);
             border-radius: 10px;
             overflow: hidden;
             transition: all 0.3s ease;
             text-decoration: none;
             color: inherit;
-            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+            box-shadow: var(--shadow);
         }
 
         .role-card:hover {
             transform: translateY(-5px);
-            box-shadow: 0 6px 12px rgba(30, 58, 138, 0.2); /* Dark blue shadow */
+            box-shadow: 0 6px 12px rgba(30, 58, 138, 0.2);
         }
 
         .role-image {
             height: 180px;
-            background: linear-gradient(135deg, #6a11cb, #2575fc); /* Elegant gradient */
+            background: linear-gradient(135deg, var(--secondary-color), var(--accent-color));
             display: flex;
             align-items: center;
             justify-content: center;
             font-size: 3em;
-            color: #ffffff;
+            color: var(--white);
         }
 
         .role-content {
@@ -247,23 +277,23 @@
 
         .role-title {
             font-size: 1.5em;
-            color: #1e3a8a; /* Dark blue for titles */
+            color: var(--primary-color);
             margin-bottom: 10px;
         }
 
         .role-company {
-            color: #666666; /* Medium gray text */
+            color: #666666;
             margin-bottom: 10px;
         }
 
         .role-period {
-            color: #666666; /* Medium gray text */
+            color: #666666;
             font-size: 0.9em;
             margin-bottom: 15px;
         }
 
         .role-description {
-            color: #333333; /* Dark gray text */
+            color: var(--text-color);
             font-size: 0.95em;
         }
 
@@ -271,15 +301,15 @@
             display: inline-block;
             margin-top: 15px;
             padding: 8px 20px;
-            background: #1e3a8a; /* Dark blue button */
-            color: white;
+            background: var(--primary-color);
+            color: var(--white);
             border-radius: 5px;
             transition: background 0.3s ease;
             text-decoration: none;
         }
 
         .learn-more:hover {
-            background: #142c6e; /* Darker blue on hover */
+            background: #142c6e;
         }
 
         /* Responsive Design */
@@ -308,233 +338,279 @@
             .role-image {
                 height: 150px;
             }
+
+            .skill-icon {
+                width: 60px;
+                height: 60px;
+            }
         }
     </style>
 </head>
 <body>
-    <nav class="navigation">
-        <a href="index.html" class="nav-brand">Muhammad Arapat Rahman</a>
-        <div class="nav-links">
-            <a href="#bio" class="nav-link">About</a>
-            <a href="#skills" class="nav-link">Skills</a>
-            <a href="#roles" class="nav-link">Experience</a>
-        </div>
-    </nav>
+    <header>
+        <nav class="navigation">
+            <a href="index.html" class="nav-brand">Muhammad Arapat Rahman</a>
+            <div class="nav-links">
+                <a href="#bio" class="nav-link">About</a>
+                <a href="#skills" class="nav-link">Skills</a>
+                <a href="#roles" class="nav-link">Experience</a>
+            </div>
+        </nav>
+    </header>
 
-    <div class="hero">
-        <div class="hero-content">
-            <img src="images/pas_foto.jpg" alt="Muhammad Arapat Rahman" class="profile-photo">
-            <h1>Muhammad Arapat Rahman, S.Kom.</h1>
-            <p>
-                IT Professional specializing in network infrastructure, system administration, and technical leadership.
-            </p>
+    <main>
+        <div class="hero">
+            <div class="hero-content">
+                <img src="images/pas_foto.jpg" alt="Muhammad Arapat Rahman" class="profile-photo">
+                <h1>Muhammad Arapat Rahman, S.Kom.</h1>
+                <p>
+                    Experienced Web Developer and IT Professional specializing in network infrastructure, system administration, and technical leadership
+                </p>
+            </div>
         </div>
+
+        <div class="container">
+           <!-- Bio Section -->
+<section id="bio" class="bio-section">
+    <!-- Ikon -->
+    <div style="text-align: center; margin-bottom: 20px;">
+        <i class="fas fa-user-circle" style="font-size: 80px; color: var(--primary-color);"></i>
     </div>
 
-    <div class="container">
-        <!-- About Section -->
-        <section id="bio" class="bio-section">
-            <h2>About Me</h2>
-            <div class="bio-grid">
-                <div class="bio-item">
-                    <div class="bio-label">Date of Birth</div>
-                    <div>Jambi, 20 Dec 1991</div>
-                </div>
-                <div class="bio-item">
-                    <div class="bio-label">Address</div>
-                    <div>Jln. TP.SRIWIJAYA RT 09 NO 11 Kec, Alam Barajo, Jambi</div>
-                </div>
-                <div class="bio-item">
-                    <div class="bio-label">Email</div>
-                    <div>Arafat.forestry@yahoo.com</div>
-                </div>
-                <div class="bio-item">
-                    <div class="bio-label">Phone</div>
-                    <div>085378601404</div>
-                </div>
-                <div class="bio-item">
-                    <div class="bio-label">WhatsApp</div>
-                    <div>085378601404</div>
-                </div>
-                <div class="bio-item">
-                    <div class="bio-label">Religion</div>
-                    <div>Islamic</div>
-                </div>
-                <div class="bio-item">
-                    <div class="bio-label">Status</div>
-                    <div>Single</div>
-                </div>
-                <div class="bio-item">
-                    <div class="bio-label">Education</div>
-                    <div>STIKOM DINAMIKA BANGSA, Majoring in Computer Systems (2010-2015)</div>
-                </div>
-            </div>
-            <!-- Download CV Button -->
-            <div style="text-align: center; margin-top: 20px;">
-                <a href="path/to/your-cv.pdf" download class="learn-more">Download CV</a>
-            </div>
-        </section>
-
-        <!-- Skills Section -->
-        <section id="skills" class="skills-section">
-            <h2>Technical Skills</h2>
-            <div class="skills-grid">
-                <div class="skill-category">
-                    <h3>Web Development</h3>
-                    <div class="skill-item">
-                        <span class="skill-tag">PHP Native</span>
-                        <div class="skill-progress">
-                            <div class="progress-bar" style="width: 80%;"></div>
-                        </div>
-                    </div>
-                    <div class="skill-item">
-                        <span class="skill-tag">MySQL</span>
-                        <div class="skill-progress">
-                            <div class="progress-bar" style="width: 75%;"></div>
-                        </div>
-                    </div>
-                    <div class="skill-item">
-                        <span class="skill-tag">HTML</span>
-                        <div class="skill-progress">
-                            <div class="progress-bar" style="width: 90%;"></div>
-                        </div>
-                    </div>
-                    <div class="skill-item">
-                        <span class="skill-tag">CSS</span>
-                        <div class="skill-progress">
-                            <div class="progress-bar" style="width: 85%;"></div>
-                        </div>
-                    </div>
-                    <div class="skill-item">
-                        <span class="skill-tag">JavaScript</span>
-                        <div class="skill-progress">
-                            <div class="progress-bar" style="width: 70%;"></div>
-                        </div>
-                    </div>
-                    <div class="skill-item">
-                        <span class="skill-tag">Node.JS</span>
-                        <div class="skill-progress">
-                            <div class="progress-bar" style="width: 60%;"></div>
-                        </div>
-                    </div>
-                </div>
-                <div class="skill-category">
-                    <h3>Network & Infrastructure</h3>
-                    <div class="skill-item">
-                        <span class="skill-tag">Cisco Router</span>
-                        <div class="skill-progress">
-                            <div class="progress-bar" style="width: 85%;"></div>
-                        </div>
-                    </div>
-                    <div class="skill-item">
-                        <span class="skill-tag">Mikrotik</span>
-                        <div class="skill-progress">
-                            <div class="progress-bar" style="width: 80%;"></div>
-                        </div>
-                    </div>
-                    <div class="skill-item">
-                        <span class="skill-tag">Firewall</span>
-                        <div class="skill-progress">
-                            <div class="progress-bar" style="width: 75%;"></div>
-                        </div>
-                    </div>
-                    <div class="skill-item">
-                        <span class="skill-tag">VoIP</span>
-                        <div class="skill-progress">
-                            <div class="progress-bar" style="width: 70%;"></div>
-                        </div>
-                    </div>
-                    <div class="skill-item">
-                        <span class="skill-tag">TCP/IP</span>
-                        <div class="skill-progress">
-                            <div class="progress-bar" style="width: 90%;"></div>
-                        </div>
-                    </div>
-                </div>
-                <div class="skill-category">
-                    <h3>Systems & Security</h3>
-                    <div class="skill-item">
-                        <span class="skill-tag">Windows Server</span>
-                        <div class="skill-progress">
-                            <div class="progress-bar" style="width: 85%;"></div>
-                        </div>
-                    </div>
-                    <div class="skill-item">
-                        <span class="skill-tag">CCTV Systems</span>
-                        <div class="skill-progress">
-                            <div class="progress-bar" style="width: 80%;"></div>
-                        </div>
-                    </div>
-                    <div class="skill-item">
-                        <span class="skill-tag">ERP Systems</span>
-                        <div class="skill-progress">
-                            <div class="progress-bar" style="width: 75%;"></div>
-                        </div>
-                    </div>
-                    <div class="skill-item">
-                        <span class="skill-tag">HRIS</span>
-                        <div class="skill-progress">
-                            <div class="progress-bar" style="width: 70%;"></div>
-                        </div>
-                    </div>
-                    <div class="skill-item">
-                        <span class="skill-tag">Network Security</span>
-                        <div class="skill-progress">
-                            <div class="progress-bar" style="width: 90%;"></div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </section>
-
-        <!-- Experience Section -->
-        <section id="roles">
-            <h2>Professional Experience</h2>
-            <div class="roles-grid">
-                <a href="it-staff.html" class="role-card">
-                    <div class="role-image">👨‍💻</div>
-                    <div class="role-content">
-                        <h2 class="role-title">IT Staff</h2>
-                        <div class="role-company">PT. Universal Support Mining</div>
-                        <div class="role-period">September 2022 - Present</div>
-                        <p class="role-description">
-                            Leading IT infrastructure and systems management, implementing cutting-edge solutions for mining operations.
-                        </p>
-                        <div class="learn-more">View Details →</div>
-                    </div>
-                </a>
-
-                <a href="it-support.html" class="role-card">
-                    <div class="role-image">🔧</div>
-                    <div class="role-content">
-                        <h2 class="role-title">IT Support</h2>
-                        <div class="role-company">PT. Thriveni Mining Group LTD</div>
-                        <div class="role-period">September 2019 - September 2020</div>
-                        <p class="role-description">
-                            Providing comprehensive IT support and maintaining critical systems for mining operations.
-                        </p>
-                        <div class="learn-more">View Details →</div>
-                    </div>
-                </a>
-
-                <a href="it-supervisor.html" class="role-card">
-                    <div class="role-image">👥</div>
-                    <div class="role-content">
-                        <h2 class="role-title">IT Supervisor</h2>
-                        <div class="role-company">PT. Bangun Rimba Sejahtera</div>
-                        <div class="role-period">August 2015 - June 2019</div>
-                        <p class="role-description">
-                            Supervising IT operations and leading infrastructure development projects.
-                        </p>
-                        <div class="learn-more">View Details →</div>
-                    </div>
-                </a>
-            </div>
-        </section>
+    <h2>About Me</h2>
+    <div class="bio-grid">
+        <div class="bio-item">
+            <div class="bio-label"><i class="fas fa-calendar-alt"></i> Date of Birth</div>
+            <div>Jambi, 20 Dec 1991</div>
+        </div>
+        <div class="bio-item">
+            <div class="bio-label"><i class="fas fa-map-marker-alt"></i> Address</div>
+            <div>Jln. TP.SRIWIJAYA RT 09 NO 11 Kec, Alam Barajo, Jambi</div>
+        </div>
+        <div class="bio-item">
+            <div class="bio-label"><i class="fas fa-envelope"></i> Email</div>
+            <div>Arafat.forestry@yahoo.com</div>
+        </div>
+        <div class="bio-item">
+            <div class="bio-label"><i class="fas fa-phone"></i> Phone</div>
+            <div>085378601404</div>
+        </div>
+        <div class="bio-item">
+            <div class="bio-label"><i class="fab fa-whatsapp"></i> WhatsApp</div>
+            <div>085378601404</div>
+        </div>
+        <div class="bio-item">
+            <div class="bio-label"><i class="fas fa-pray"></i> Religion</div>
+            <div>Islamic</div>
+        </div>
+        <div class="bio-item">
+            <div class="bio-label"><i class="fas fa-user"></i> Status</div>
+            <div>Single</div>
+        </div>
+        <div class="bio-item">
+            <div class="bio-label"><i class="fas fa-graduation-cap"></i> Education</div>
+            <div>STIKOM DINAMIKA BANGSA, Majoring in Computer Systems (2010-2015)</div>
+        </div>
     </div>
+    <div style="text-align: center; margin-top: 20px;">
+        <a href="path/to/your-cv.pdf" download class="learn-more">
+            <i class="fas fa-download"></i> Download CV
+        </a>
+    </div>
+</section>
+            <!-- Skills Section -->
+            <section id="skills" class="skills-section">
+                <h2>Technical Skills</h2>
+                <div class="skills-grid">
+                    <div class="skill-category">
+                        <div class="skill-icon">
+                            <svg viewBox="0 0 200 200">
+                                <rect x="10" y="10" width="180" height="180" rx="20" fill="var(--secondary-color)" opacity="0.1"/>
+                                <path d="M40 70 L90 120 L40 170" stroke="var(--secondary-color)" stroke-width="8" fill="none" stroke-linecap="round"/>
+                                <path d="M160 70 L110 120 L160 170" stroke="var(--secondary-color)" stroke-width="8" fill="none" stroke-linecap="round"/>
+                                <circle cx="100" cy="40" r="15" fill="var(--accent-color)"/>
+                            </svg>
+                        </div>
+                        <h3>Web Development</h3>
+                        <div class="skill-item">
+                            <span class="skill-tag">PHP Native</span>
+                            <div class="skill-progress">
+                                <div class="progress-bar" style="width: 80%;"></div>
+                            </div>
+                        </div>
+                        <div class="skill-item">
+                            <span class="skill-tag">MySQL</span>
+                            <div class="skill-progress">
+                                <div class="progress-bar" style="width: 75%;"></div>
+                            </div>
+                        </div>
+                        <div class="skill-item">
+                            <span class="skill-tag">HTML</span>
+                            <div class="skill-progress">
+                                <div class="progress-bar" style="width: 90%;"></div>
+                            </div>
+                        </div>
+                        <div class="skill-item">
+                            <span class="skill-tag">CSS</span>
+                            <div class="skill-progress">
+                                <div class="progress-bar" style="width: 85%;"></div>
+                            </div>
+                        </div>
+                        <div class="skill-item">
+                            <span class="skill-tag">JavaScript</span>
+                            <div class="skill-progress">
+                                <div class="progress-bar" style="width: 70%;"></div>
+                            </div>
+                        </div>
+                        <div class="skill-item">
+                            <span class="skill-tag">Node.JS</span>
+                            <div class="skill-progress">
+                                <div class="progress-bar" style="width: 60%;"></div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="skill-category">
+                        <div class="skill-icon">
+                            <svg viewBox="0 0 200 200">
+                                <rect x="10" y="10" width="180" height="180" rx="20" fill="var(--secondary-color)" opacity="0.1"/>
+                                <circle cx="100" cy="100" r="50" stroke="var(--secondary-color)" stroke-width="8" fill="none"/>
+                                <circle cx="100" cy="100" r="15" fill="var(--accent-color)"/>
+                                <circle cx="60" cy="60" r="10" fill="var(--accent-color)"/>
+                                <circle cx="140" cy="140" r="10" fill="var(--accent-color)"/>
+                                <circle cx="60" cy="140" r="10" fill="var(--accent-color)"/>
+                                <circle cx="140" cy="60" r="10" fill="var(--accent-color)"/>
+                                <line x1="70" y1="70" x2="130" y2="130" stroke="var(--secondary-color)" stroke-width="4"/>
+                                <line x1="70" y1="130" x2="130" y2="70" stroke="var(--secondary-color)" stroke-width="4"/>
+                            </svg>
+                        </div>
+                        <h3>Network & Infrastructure</h3>
+                        <div class="skill-item">
+                            <span class="skill-tag">Cisco Router</span>
+                            <div class="skill-progress">
+                                <div class="progress-bar" style="width: 85%;"></div>
+                            </div>
+                        </div>
+                        <div class="skill-item">
+                            <span class="skill-tag">Mikrotik</span>
+                            <div class="skill-progress">
+                                <div class="progress-bar" style="width: 80%;"></div>
+                            </div>
+                        </div>
+                        <div class="skill-item">
+                            <span class="skill-tag">Firewall</span>
+                            <div class="skill-progress">
+                                <div class="progress-bar" style="width: 75%;"></div>
+                            </div>
+                        </div>
+                        <div class="skill-item">
+                            <span class="skill-tag">VoIP</span>
+                            <div class="skill-progress">
+                                <div class="progress-bar" style="width: 70%;"></div>
+                            </div>
+                        </div>
+                        <div class="skill-item">
+                            <span class="skill-tag">TCP/IP</span>
+                            <div class="skill-progress">
+                                <div class="progress-bar" style="width: 90%;"></div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="skill-category">
+                        <div class="skill-icon">
+                            <svg viewBox="0 0 200 200">
+                                <rect x="10" y="10" width="180" height="180" rx="20" fill="var(--secondary-color)" opacity="0.1"/>
+                                <path d="M100 40 L140 60 V120 L100 140 L60 120 V60 Z" fill="none" stroke="var(--secondary-color)" stroke-width="8"/>
+                                <circle cx="100" cy="90" r="20" fill="var(--accent-color)"/>
+                                <rect x="95" y="80" width="10" height="30" fill="var(--white)"/>
+                                <rect x="95" y="80" width="10" height="10" fill="var(--white)"/>
+                            </svg>
+                        </div>
+                        <h3>Systems & Security</h3>
+                        <div class="skill-item">
+                            <span class="skill-tag">Windows Server</span>
+                            <div class="skill-progress">
+                                <div class="progress-bar" style="width: 85%;"></div>
+                            </div>
+                        </div>
+                        <div class="skill-item">
+                            <span class="skill-tag">CCTV Systems</span>
+                            <div class="skill-progress">
+                                <div class="progress-bar" style="width: 80%;"></div>
+                            </div>
+                        </div>
+                        <div class="skill-item">
+                            <span class="skill-tag">ERP Systems</span>
+                            <div class="skill-progress">
+                                <div class="progress-bar" style="width: 75%;"></div>
+                            </div>
+                        </div>
+                        <div class="skill-item">
+                            <span class="skill-tag">HRIS</span>
+                            <div class="skill-progress">
+                                <div class="progress-bar" style="width: 70%;"></div>
+                            </div>
+                        </div>
+                        <div class="skill-item">
+                            <span class="skill-tag">Network Security</span>
+                            <div class="skill-progress">
+                                <div class="progress-bar" style="width: 90%;"></div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <!-- Experience Section -->
+            <section id="roles">
+                <h2>Professional Experience</h2>
+                <div class="roles-grid">
+                    <a href="it-staff.html" class="role-card">
+                        <div class="role-image">👨‍💻</div>
+                        <div class="role-content">
+                            <h2 class="role-title">IT Staff</h2>
+                            <div class="role-company">PT. Universal Support Mining</div>
+                            <div class="role-period">September 2022 - Present</div>
+                            <p class="role-description">
+                                Leading IT infrastructure and systems management, implementing cutting-edge solutions for mining operations.
+                            </p>
+                            <div class="learn-more">View Details →</div>
+                        </div>
+                    </a>
+
+                    <a href="it-support.html" class="role-card">
+                        <div class="role-image">🔧</div>
+                        <div class="role-content">
+                            <h2 class="role-title">IT Support</h2>
+                            <div class="role-company">PT. Thriveni Mining Group LTD</div>
+                            <div class="role-period">September 2019 - September 2020</div>
+                            <p class="role-description">
+                                Providing comprehensive IT support and maintaining critical systems for mining operations.
+                            </p>
+                            <div class="learn-more">View Details →</div>
+                        </div>
+                    </a>
+
+                    <a href="it-supervisor.html" class="role-card">
+                        <div class="role-image">👥</div>
+                        <div class="role-content">
+                            <h2 class="role-title">IT Supervisor</h2>
+                            <div class="role-company">PT. Bangun Rimba Sejahtera</div>
+                            <div class="role-period">August 2015 - June 2019</div>
+                            <p class="role-description">
+                                Supervising IT operations and leading infrastructure development projects.
+                            </p>
+                            <div class="learn-more">View Details →</div>
+                        </div>
+                    </a>
+                </div>
+            </section>
+        </div>
+    </main>
 
     <script>
-        // Animasi saat scroll
+        // Animation on scroll
         const sections = document.querySelectorAll('section');
 
         const observer = new IntersectionObserver((entries) => {
@@ -547,6 +623,24 @@
 
         sections.forEach(section => {
             observer.observe(section);
+        });
+
+        // Animate progress bars when visible
+        const progressBars = document.querySelectorAll('.progress-bar');
+        const progressObserver = new IntersectionObserver((entries) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    const width = entry.target.style.width;
+                    entry.target.style.width = '0';
+                    setTimeout(() => {
+                        entry.target.style.width = width;
+                    }, 100);
+                }
+            });
+        }, { threshold: 0.1 });
+
+        progressBars.forEach(bar => {
+            progressObserver.observe(bar);
         });
     </script>
 </body>
